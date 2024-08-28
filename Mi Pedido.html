@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de compra</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header class="header">
     </header>
     <main>
-        <h1>Mi Pedido</h1>
         <div>
+            <h1>Mi Pedido</h1>
+            <div id="cartItems"></div>
             <h2>Carga tus datos</h2>
             <form id="informacion">
                 <p>Nombre</p>
@@ -20,9 +21,9 @@
                 <input type="text">
                 <p>Telefono</p>
                 <input type="number">
-                <p>email</p>
+                <p>Email</p>
                 <input type="email">
-                <input type="submit" value="Send" class="button_grey" >
+                <input type="submit" value="Send" class="sendBoton" >
             </form>
             <div>
                 <p>Nombre: <h4 id="nombre"></h4> </p>
@@ -30,13 +31,13 @@
                 <p>Telefono:<h4 id="telefono"></h4></p>
                 <p>Email:<h4 id="email"></h4></p>
             </div>
+        
         </div>
     </main>
     <footer>
 
     </footer>
-
-
+    <script src="./js/carrito.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
