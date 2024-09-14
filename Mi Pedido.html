@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Carrito de compra</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <header class="header">
     </header>
     <main>
+        <h1>Mi Pedido</h1>
         <div>
-            <h1>Mi Pedido</h1>
-            <div id="cartItems"></div>
-            <h2>Carga tus datos</h2>
+            <div id="cartItems"></div>  
+            <div id="totalCarrito"></div> 
             <form id="informacion">
+                <h2>Datos de envio</h2>
                 <p>Nombre</p>
                 <input type="text">
                 <p>Dirección del envío</p>
@@ -23,21 +27,19 @@
                 <input type="number">
                 <p>Email</p>
                 <input type="email">
-                <input type="submit" value="Send" class="sendBoton" >
+                <label for="mensaje">Observaciones:</label>
+                <textarea name="mensaje" id="mensaje" cols="20" rows="5"></textarea>
+                <input type="submit" value="Confirmar" class="sendBoton">
             </form>
-            <div>
-                <p>Nombre: <h4 id="nombre"></h4> </p>
-                <p>Direccion de envío:<h4 id="direccion"></h4></p>
-                <p>Telefono:<h4 id="telefono"></h4></p>
-                <p>Email:<h4 id="email"></h4></p>
-            </div>
-        
         </div>
-    </main>
-    <footer>
+        <button id="realizarCompra" style="display:none;">Realizar compra</button> 
+    <footer id="footer">
 
     </footer>
-    <script src="./js/carrito.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/navegacion.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/carrito.js"></script>
 </body>
+
 </html>

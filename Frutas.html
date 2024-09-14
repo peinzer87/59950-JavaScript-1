@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header class="header">
     </header>
-    <main id="miMain">
-        <h1>Frutas</h1>
-        <div id="product-list"> </div>
-    </main>
-    <footer>
+<main> 
+    <h1>Frutas</h1>
+    <div class="buscadorFruta">
+        <input type="text" id="buscadorFruta" placeholder="Buscar productos...">
+    </div>
+    <div id="product-list"> <!-- Este es el contenedor donde se mostrarán los productos --> </div>
+</main>
+    <footer id="footer">
 
     </footer>
 
     
-    <script src="./js/frutas.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/navegacion.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/frutas.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

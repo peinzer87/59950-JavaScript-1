@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <header class="header">
+
+    </header>
+    <main>
+        <div id="login-container">
+            <form id="loginForm">
+                <h2 id="tituloLogin">Iniciar Sesión</h2>
+                <input type="text" id="name" placeholder="Nombre" required />
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="password" id="password" placeholder="Contraseña" required />
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <div id="logout-container" style="display: none;">
+                <p id="loginMessage">¡Bienvenido!</p>
+                <button id="logoutButton">Cerrar sesión</button>
+            </div>
+            
+        </div>
+        
+    </main>
+    <footer id="footer">
+        
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/navegacion.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>
+

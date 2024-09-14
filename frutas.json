@@ -1,0 +1,58 @@
+[
+  {
+    "id": 101,
+    "nombre": "Bananas",
+    "precio": 150,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 102,
+    "nombre": "Manzanas",
+    "precio": 91,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 103,
+    "nombre": "Peras",
+    "precio": 102,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 104,
+    "nombre": "Mandarinas",
+    "precio": 54,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 105,
+    "nombre": "Uvas",
+    "precio": 98,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 106,
+    "nombre": "Duraznos",
+    "precio": 125,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 107,
+    "nombre": "Sandias",
+    "precio": 127,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 108,
+    "nombre": "Arandanos",
+    "precio": 401,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  }
+]

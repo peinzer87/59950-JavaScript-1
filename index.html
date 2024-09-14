@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fruta fresca</title>
+    <link rel="shortcut icon" href="./ASSETS/FRUTAAAA2024-08-27 224137.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css">
+
 </head>
+
 <body>
     <header class="header">
+        
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="./ASSETS/inpost-fresh_13.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./ASSETS/apples-1004886_1280.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./ASSETS/cesta-cheia-de-vegetais-organicos-de-colheita-e-raiz-na-fazenda-bio-organica_136404-190.avif" alt=""></div>
+                <div class="swiper-slide"><img src="./ASSETS/envioVeggie.jpg" alt=""></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </header>
-    <main>
-        <h1 id="nombreLocal"> Feria fresca</h1>
-        <img class="imgMain" src="./ASSETS/FERIA2024-08-26 202702.png" alt="fotoverduras">
+    <main id="mainPrincipal">
+
     </main>
-    <footer>
+    <footer id="footer">
 
     </footer>
 
-
     <script src="js/index.js"></script>
+    <script src="js/navegacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script> const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });</script>
+    <script src="./js/footer.js"></script>
+
 </body>
+
 </html>

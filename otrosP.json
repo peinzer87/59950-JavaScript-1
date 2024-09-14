@@ -1,0 +1,58 @@
+[
+  {
+    "id": 201,
+    "nombre": "Miel 250g",
+    "precio": 150,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 202,
+    "nombre": "Huevos 6",
+    "precio": 91,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 203,
+    "nombre": "Queso 1kg",
+    "precio": 102,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 204,
+    "nombre": "Yogurt 1lt",
+    "precio": 54,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 205,
+    "nombre": "Leche 1lt",
+    "precio": 98,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 206,
+    "nombre": "Jugos 1lt",
+    "precio": 125,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 207,
+    "nombre": "Cafe 500gr",
+    "precio": 127,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  },
+  {
+    "id": 208,
+    "nombre": "Te",
+    "precio": 401,
+    "stock": 100,
+    "imagen": "assets/gyümi.jpg"
+  }
+]
