@@ -4,21 +4,21 @@
       "nombre": "Zanahorias",
       "precio": 150,
       "stock": 100,
-      "imagen": "Assets/envioVeggie.jpg"
+      "imagen": "./Assets/envioVeggie.jpg"
     },
     {
       "id": 2,
       "nombre": "Papas",
       "precio": 91,
       "stock": 100,
-      "imagen": "Assets/envioVeggie.jpg"
+      "imagen": "../Assets/envioVeggie.jpg"
     },
     {
       "id": 3,
       "nombre": "Lechugas",
       "precio": 102,
       "stock": 100,
-      "imagen": "Assets/envioVeggie.jpg"
+      "imagen": "./Assets/envioVeggie.jpg"
     },
     {
       "id": 4,
