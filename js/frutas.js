@@ -59,7 +59,7 @@ let frutasCargadas = []; // Variable global para almacenar los productos una vez
 
 const peticionFruta = async () => {
     try {
-        const respuesta = await fetch("../frutas.json"); 
+        const respuesta = await fetch("./frutas.json"); 
         const datos = await respuesta.json();
 
         frutasCargadas = datos; // Guardamos los productos en la variable global*//

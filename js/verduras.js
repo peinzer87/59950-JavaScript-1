@@ -53,7 +53,7 @@ function buscarProducto() {
 //** Función para cargar las verduras desde un archivo json**/
 async function cargarVerduras() {
     try {
-        const respuesta = await fetch('/verduras.json'); 
+        const respuesta = await fetch("./verduras.json"); 
         verdurasCargadas = await respuesta.json();
         mostrarProductos(verdurasCargadas);
     } catch (error) {

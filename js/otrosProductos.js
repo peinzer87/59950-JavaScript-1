@@ -45,7 +45,7 @@ function buscarProducto() {
 
 //Función para cargar el archivo JSON*//
 function cargarOtrosProductos() {
-    fetch('otrosp.json')
+    fetch("./otrosP.json")
         .then(response => response.json())
         .then(data => {
             otrosProductos = data;  //guarda los productos en la variable*/
