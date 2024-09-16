@@ -4,56 +4,56 @@
       "nombre": "Zanahorias",
       "precio": 150,
       "stock": 100,
-      "imagen": "https://usuario.github.io/nombre-repositorio/Assets/envioVeggie.jpg"
+      "imagen": "Assets/envioVeggie.jpg"
     },
     {
       "id": 2,
       "nombre": "Papas",
       "precio": 91,
       "stock": 100,
-      "imagen": "https://usuario.github.io/nombre-repositorio/Assets/envioVeggie.jpg"
+      "imagen": "Assets/envioVeggie.jpg"
     },
     {
       "id": 3,
       "nombre": "Lechugas",
       "precio": 102,
       "stock": 100,
-      "imagen": "https://usuario.github.io/nombre-repositorio/Assets/envioVeggie.jpg"
+      "imagen": "Assets/envioVeggie.jpg"
     },
     {
       "id": 4,
       "nombre": "Tomates",
       "precio": 54,
       "stock": 100,
-      "imagen": "https://usuario.github.io/nombre-repositorio/Assets/envioVeggie.jpg"
+      "imagen": "Assets/envioVeggie.jpg"
     },
     {
       "id": 5,
       "nombre": "Cebollas",
       "precio": 98,
       "stock": 100,
-      "imagen": "https://usuario.github.io/nombre-repositorio/Assets/envioVeggie.jpg"
+      "imagen": "Assets/envioVeggie.jpg"
     },
     {
       "id": 6,
       "nombre": "Boñato",
       "precio": 125,
       "stock": 100,
-      "imagen": "https://usuario.github.io/nombre-repositorio/Assets/envioVeggie.jpg"
+      "imagen": "Assets/envioVeggie.jpg"
     },
     {
       "id": 7,
       "nombre": "Calabaza",
       "precio": 87,
       "stock": 100,
-      "imagen": "https://usuario.github.io/nombre-repositorio/Assets/envioVeggie.jpg"
+      "imagen": "Assets/envioVeggie.jpg"
     },
     {
       "id": 8,
       "nombre": "Remolacha",
       "precio": 99,
       "stock": 100,
-      "imagen": "https://usuario.github.io/nombre-repositorio/Assets/envioVeggie.jpg"
+      "imagen": "Assets/envioVeggie.jpg"
     }
   ]
   
