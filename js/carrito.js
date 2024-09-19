@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Función para cargar y mostrar el carrito
+    //*Función para cargar y mostrar el carrito*//
     function cargarCarrito() {
         const cartItemsContainer = document.getElementById('cartItems');
         const totalContainer = document.getElementById('totalCarrito');
@@ -11,10 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (carrito.length === 0) {
             cartItemsContainer.innerHTML = '<p>El carrito está vacío</p>';
-            realizarCompraBtn.style.display = 'none';  //*Oculta el botón de compra si no hay productos*--//
+            realizarCompraBtn.style.display = 'none'; 
         } else {
             let total = 0;
-            realizarCompraBtn.style.display = 'block';  //*Mostrar el botón de compra si hay productos**/
+            realizarCompraBtn.style.display = 'block'; 
+
             const productosAgrupados = carrito.reduce((acc, producto) => {
                 const existente = acc.find(p => p.id === producto.id);
                 if (existente) {
@@ -33,14 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
                 cartItemsContainer.appendChild(productoDiv);
 
-                //*Calcular el total del carrito**/
                 total += producto.precio * producto.cantidad;
             });
 
-            //*Mostrar el total del carrito*///
             totalContainer.innerHTML = `<p>Total: $${total}</p>`;
 
-            //*Agregar evento a los botones de eliminar**/
             const botonesEliminar = document.querySelectorAll('.eliminar-producto');
             botonesEliminar.forEach(boton => {
                 boton.addEventListener('click', function () {
@@ -51,70 +49,88 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    //*Función para eliminar productos del carrito*//
     function eliminarProducto(index) {
         let carrito = JSON.parse(localStorage.getItem("Cart")) || [];
-        carrito.splice(index, 1);  // *limina el producto del carrito**/
-        localStorage.setItem("Cart", JSON.stringify(carrito));  //Actualizar localStorage*//
-        cargarCarrito();  // Refrescar la vista del carrito
+        carrito.splice(index, 1);  
+        localStorage.setItem("Cart", JSON.stringify(carrito));  
+        cargarCarrito();  
     }
 
-    ///Función para realizar la compra (vacía el carrito)**/
-    function realizarCompra() {
-        let carrito = JSON.parse(localStorage.getItem("Cart")) || [];
-        if (carrito.length > 0) {
-            Swal.fire({
-                title: "Confirmar Pedido",
-                icon: "question",
-                showCancelButton: true,
-                confirmButtonColor: "#47cc32",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Si, Comprar!"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire({
-                        title: "Compra Realizada!",
-                        text: "Tu pedido llegara pronto",
-                        icon: "success"
-                    });
-                }
-            });
-            localStorage.removeItem("Cart");  //*Vacia el carrito en localStorage*/
-            cargarCarrito();  /* Refrescar la vista del carrito*/
-        } else {
-            alert('El carrito está vacío.');
-        }
-
-    }
-
-    // Capturar y guardar información del cliente**/
+    // Función para capturar y guardar información del cliente
     let informacion = document.querySelector('#informacion');
     if (informacion) {
         informacion.addEventListener("submit", (e) => {
             e.preventDefault();
-    
+            
+            Swal.fire({
+                title: "Confirmar datos",
+                icon: "question",
+                showCancelButton: true,
+                confirmButtonColor: "#47cc32",
+                cancelButtonColor: "#473838",
+                confirmButtonText: "Si, confirmar"
+            })
             const cliente = {
                 nombre: document.getElementById('nombre').value,
                 direccion: document.getElementById('direccion').value,
                 telefono: document.getElementById('telefono').value,
                 email: document.getElementById('email').value
             };
-    
-            // Guardar los datos en localStorage
+            
+            //*Guardar los datos en localStorage*/
             localStorage.setItem("Cliente", JSON.stringify(cliente));
-    
-            // Mostrar datos en el DOM
+            
+
+            //*Mostrar los datos en el DOM*/
             document.getElementById('nombre').innerHTML = cliente.nombre;
             document.getElementById('direccion').innerHTML = cliente.direccion;
             document.getElementById('telefono').innerHTML = cliente.telefono;
             document.getElementById('email').innerHTML = cliente.email;
         });
+        
     }
-    
 
-    //Cargar carrito y configurar el botón de realizar compra***//
+    //*Función para realizar la compra ( yvacía el carrito y los datos del cliente)*//
+    function realizarCompra() {
+        let carrito = JSON.parse(localStorage.getItem("Cart")) || [];
+        let cliente = JSON.parse(localStorage.getItem("Cliente"));
+
+        if (!cliente) {
+            alert("Por favor, complete sus datos antes de realizar la compra.");
+            return;
+        }
+
+        if (carrito.length > 0) {
+            Swal.fire({
+                title: "Confirmar Pedido",
+                icon: "question",
+                showCancelButton: true,
+                confirmButtonColor: "#47cc32",
+                cancelButtonColor: "#473838",
+                confirmButtonText: "Si, Comprar!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Compra Realizada!",
+                        text: "Tu pedido llegará pronto",
+                        icon: "success"
+                    });
+
+                    //* Limpiael carrito y cliente del localStorage*/
+                    localStorage.removeItem("Cart");
+                    localStorage.removeItem("Cliente");
+
+                    //*Refrescar la vista del carrito*/
+                    cargarCarrito();
+                }
+            });
+        } else {
+            alert('El carrito está vacío.');
+        }
+    }
+
+    //*Cargar carrito y configurar el botón de realizar compra*/
     cargarCarrito();
     const realizarCompraBtn = document.getElementById('realizarCompra');
     realizarCompraBtn.addEventListener('click', realizarCompra);
-
 });
