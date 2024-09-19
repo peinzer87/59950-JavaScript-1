@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             let total = 0;
             realizarCompraBtn.style.display = 'block';  //*Mostrar el botón de compra si hay productos**/
-
             const productosAgrupados = carrito.reduce((acc, producto) => {
                 const existente = acc.find(p => p.id === producto.id);
                 if (existente) {
@@ -93,25 +92,25 @@ document.addEventListener("DOMContentLoaded", function () {
     if (informacion) {
         informacion.addEventListener("submit", (e) => {
             e.preventDefault();
-
-            let datos = e.target;
-
+    
             const cliente = {
-                nombre: datos.children[1].value,
-                direccion: datos.children[3].value,
-                telefono: datos.children[5].value,
-                email: datos.children[7].value
+                nombre: document.getElementById('nombre').value,
+                direccion: document.getElementById('direccion').value,
+                telefono: document.getElementById('telefono').value,
+                email: document.getElementById('email').value
             };
-
+    
+            // Guardar los datos en localStorage
             localStorage.setItem("Cliente", JSON.stringify(cliente));
-
-            //Mostrar datos en el DOM**/
+    
+            // Mostrar datos en el DOM
             document.getElementById('nombre').innerHTML = cliente.nombre;
             document.getElementById('direccion').innerHTML = cliente.direccion;
             document.getElementById('telefono').innerHTML = cliente.telefono;
             document.getElementById('email').innerHTML = cliente.email;
         });
     }
+    
 
     //Cargar carrito y configurar el botón de realizar compra***//
     cargarCarrito();

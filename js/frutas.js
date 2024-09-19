@@ -31,11 +31,11 @@ function addToCart(productoID) {
 
 function mostrarProductos(frutas) {
     const productList = document.getElementById('product-list');
-    productList.innerHTML = ''; // Limpiamos el contenedor de productos//
+    productList.innerHTML = ''; // se limpiaa el contenedor de productos//
 
     frutas.forEach(({ id, nombre, precio, imagen }) => {
         const productoDiv = document.createElement('div');
-        productoDiv.className = 'producto';  // Clase asignada al div*//
+        productoDiv.className = 'producto';  //*Clase asignada al div*//
         productoDiv.innerHTML = `
             <img src="${imagen}" alt="${nombre}" class="producto-imagen" width="150">
             <p class="producto-nombre">- ${nombre} / / Precio x kilo: $${precio}</p>
@@ -52,19 +52,19 @@ function buscarProducto() {
     const productosFiltrados = frutasCargadas.filter(producto =>
         producto.nombre.toLowerCase().includes(terminoBusqueda)
     );
-    mostrarProductos(productosFiltrados); // Muestra los productos filtrados*//
+    mostrarProductos(productosFiltrados); ///*Muestra los productos filtrados*//
 }
 
-let frutasCargadas = []; // Variable global para almacenar los productos una vez cargados*//
+let frutasCargadas = []; //**Variable global para almacenar los productos una vez cargados*//
 
 const peticionFruta = async () => {
     try {
         const respuesta = await fetch("./frutas.json"); 
         const datos = await respuesta.json();
 
-        frutasCargadas = datos; // Guardamos los productos en la variable global*//
+        frutasCargadas = datos; //*Guardamos los productos en la variable global*//
 
-        mostrarProductos(frutasCargadas); // Mostramos todos los productos inicialmente*/
+        mostrarProductos(frutasCargadas); //*Mostramos todos los productos inicialmente*/
     } catch (error) {
         console.error("Error al cargar el JSON de frutas:", error);
     }
@@ -72,9 +72,9 @@ const peticionFruta = async () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    peticionFruta(); // Llamamos a la función para cargar los productos*//
+    peticionFruta(); //*Llamamos a la función para cargar los productos*//
 
-    // Agrega el evento input para búsqueda en tiempo real*//
+    //*Agrega el evento input para búsqueda en tiempo real*//
     const buscadorFruta = document.getElementById('buscadorFruta');
     buscadorFruta.addEventListener('input', buscarProducto);
 });

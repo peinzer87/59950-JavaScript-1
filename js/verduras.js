@@ -30,7 +30,7 @@ function mostrarProductos(verduras) {
     productList.innerHTML = '';
     verduras.forEach(({id, nombre, precio, imagen}) => {
         const productoDiv = document.createElement('div');
-        productoDiv.className = 'producto';  // Clase asignada al div
+        productoDiv.className = 'producto';  //*Clase asignada al div*/
         productoDiv.innerHTML = `
             <img src="${imagen}" alt="${nombre}" class="producto-imagen" width="150">
             <p class="producto-nombre">- ${nombre} / / Precio x kilo: $${precio}</p>
@@ -61,11 +61,11 @@ async function cargarVerduras() {
     }
 }
 
-// Evento cuando el DOM esté cargado
+//*Evento cuando el DOM esté cargado*//
 document.addEventListener("DOMContentLoaded", () => {
     cargarVerduras();
 
-    // Agrega el evento input para búsqueda en tiempo real
+    //*Agrega el evento input para búsqueda en tiempo real*/
     const buscadorVerduras = document.getElementById('buscadorVerduras');
     buscadorVerduras.addEventListener('input', buscarProducto);
 });

@@ -1,7 +1,7 @@
 let carrito = JSON.parse(localStorage.getItem("Cart")) || [];
 let otrosProductos = [];  //*Inicializa la lista de productos**/
 
-// Función para agregar productos al carrito*//
+//**Función para agregar productos al carrito*//
 function addToCart(productoID) {
     const product = otrosProductos.find(p => p.id === productoID);
     const cantidad = parseInt(document.getElementById(`cantidad-${productoID}`).value) || 1;
@@ -17,13 +17,13 @@ function addToCart(productoID) {
     }).showToast();
 }
 
-// Función para mostrar productos en el Dom**//
+//**Función para mostrar productos en el Dom**//
 function mostrarProductos(productos) {
     const productList = document.getElementById('productListOtros');
     productList.innerHTML = '';
     productos.forEach(({ id, nombre, precio, imagen }) => {
         const productoDiv = document.createElement('div');
-        productoDiv.className = 'producto';  // Clase asignada al div*//
+        productoDiv.className = 'producto';  //***/ Clase asignada al div*//
         productoDiv.innerHTML = `
             <img src="${imagen}" alt="${nombre}" class="producto-imagen" width="150">
             <p class="producto-nombre">- ${nombre} / / Precio: $${precio}</p>
@@ -43,12 +43,12 @@ function buscarProducto() {
     mostrarProductos(productosFiltrados);
 }
 
-//Función para cargar el archivo JSON*//
+//*Función para cargar el archivo JSON*//
 function cargarOtrosProductos() {
     fetch("./otrosP.json")
         .then(response => response.json())
         .then(data => {
-            otrosProductos = data;  //guarda los productos en la variable*/
+            otrosProductos = data;  //*guarda los productos en la variable*/
             mostrarProductos(otrosProductos);  //*muestra los productos en la página*//
         })
         .catch(error => {

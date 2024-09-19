@@ -139,7 +139,7 @@ h1{
     color: #ffffff;
     background: #47cc32 !important;
 }
-.sendBoton, #product-list button, #productListVerduras button, #productListOtros button, #loginForm button, #logoutButton, .eliminar-producto, #realizarCompra {
+.sendBoton, #botonSubmit, #product-list button, #productListVerduras button, #productListOtros button, #loginForm button, #logoutButton, .eliminar-producto, #realizarCompra {
     background-color: #ff4141;
     color: #efdbdb;
     border: none;
@@ -150,7 +150,7 @@ h1{
     transition: background-color 0.3s ease;
 }
 
-.sendBoton:hover, .eliminar-producto:hover, #product-list button:hover, #productListVerduras button:hover, #logoutButton, #productListOtros button:hover, #loginForm button:hover, #realizarCompra:hover {
+.sendBoton:hover,#botonSubmit:hover, .eliminar-producto:hover, #product-list button:hover, #productListVerduras button:hover, #logoutButton, #productListOtros button:hover, #loginForm button:hover, #realizarCompra:hover {
     background-color: #920922;
     color: white;
 }
@@ -324,7 +324,7 @@ h1{
     align-items: center;
 }
 
-/* Responsive */
+/** Responsive */
 @media (max-width: 768px) {
     .navbar .ul {
         gap: 1rem;
@@ -333,6 +333,15 @@ h1{
 
     #mainPrincipal {
         padding: 0.5rem;
+    }
+    #cartItems div p{
+        margin: 3px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #920922;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -347,5 +356,17 @@ h1{
 
     #footer {
         font-size: 1rem;
+
+    }
+    #cartItems div{
+        margin: 3px;
+        border: .0625rem solid rgb(173, 169, 169);
+        border-radius: 30px;
+        font-size: .5rem;
+        font-weight: bold;
+        color: #920922;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }

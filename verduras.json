@@ -46,7 +46,7 @@
       "nombre": "Calabaza",
       "precio": 87,
       "stock": 100,
-      "imagen": "Assets/envioVeggie.jpg"
+      "imagen": "./assets/img/envioVeggie.jpg"
     },
     {
       "id": 8,
